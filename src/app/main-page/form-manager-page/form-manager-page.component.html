@@ -1,0 +1,23 @@
+<div>
+  <div class="d-flex justify-content-between">
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Allowed forms
+      </button>
+      <ul class="dropdown-menu">
+        <li *ngFor="let form of formList" class="dropdown-item" (click)="setForm(form)">
+          {{form.name}}
+        </li>
+      </ul>
+    </div>
+    <button *ngIf="formData" class="btn btn-outline-info ms-2">
+      <i class="bi-pen"></i>
+      Edit Form
+    </button>
+  </div>
+  <div class="card p-2 mt-2" *ngIf="formData">
+    <formio [form]="formData"
+            (submit)="onSubmit($event)"
+    ></formio>
+  </div>
+</div>

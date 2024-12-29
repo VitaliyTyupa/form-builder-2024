@@ -1,0 +1,28 @@
+<div class="container-fluid">
+  <div class="row mt-3 pr-3">
+    <div class="col-4 form-inline">
+      <input type="text" class="form-control"
+             placeholder="Enter Form Name"
+             [formControl]="newFormName"
+             [ngClass]="{'is-invalid': newFormName.invalid && newFormName.touched}"
+             required>
+      <div class="invalid-feedback">Form name is required</div>
+    </div>
+    <div class="col-5">
+      <button type="button" class="btn btn-primary me-1" (click)="saveForm(form)">Save Form</button>
+      <button type="button" class="btn btn-outline-danger" (click)="clearForm()">Clear Form</button>
+    </div>
+  </div>
+  <div class="row mt-3 pr-3 m-2 p-2 border">
+    <h4>Form Preview</h4>
+    <div class="col-9 p-2 bg-body-tertiary">
+      <form-builder [form]="form.metadata" (change)="onChangeForm($event)"></form-builder>
+    </div>
+<!--    <div class="col-3 p-2">-->
+<!--      <h3>JSON of Form</h3>-->
+<!--      <div class="well jsonviewer">-->
+<!--        <pre id="json"><code class="language-json" #json></code></pre>-->
+<!--      </div>-->
+<!--    </div>-->
+  </div>
+</div>
