@@ -5,4 +5,5 @@ import {FormManagerPageComponent} from "./form-manager-page/form-manager-page.co
 export const MainRoutes = [
   {path: 'form-builder', component: FormBuilderPageComponent},
   {path: 'form-manager', component: FormManagerPageComponent},
+  {path: '', component: FormManagerPageComponent},
 ];
