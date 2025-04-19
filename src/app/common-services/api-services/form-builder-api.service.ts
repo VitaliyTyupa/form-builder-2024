@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 
-const API_URL = '/api/form-builder';
+const API_URL = 'https://tekamolo.info/api/form-builder';
 @Injectable({
   providedIn: 'root'
 })
