@@ -16,7 +16,10 @@
   <div class="row mt-3 pr-3 m-2 p-2 border">
     <h4>Form Preview</h4>
     <div class="col-9 p-2 bg-body-tertiary">
-      <form-builder [form]="form.metadata" (change)="onChangeForm($event)"></form-builder>
+      <form-builder
+        [form]="form.metadata"
+        (change)="onChangeForm($event)"
+        [options]="renderOptions"></form-builder>
     </div>
     <div class="col-3 p-2">
       <h3>JSON of Form</h3>
